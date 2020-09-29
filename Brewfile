@@ -1,3 +1,5 @@
+tap "homebrew/cask"
+
 brew "carthage"
 brew "cocoapods"
 brew "ffmpeg"
@@ -6,3 +8,5 @@ brew "imagemagick"
 brew "jq"
 brew "rbenv"
 brew "ruby-build"
+
+cask "Zettlr"
