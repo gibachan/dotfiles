@@ -1,0 +1,10 @@
+[user]
+	name = gibachan
+	email = childhoodend.tk@gmail.com
+[alias]
+    s = status
+    ss = status -s
+    co = checkout
+    lg = log --all --decorate --oneline --graph
+    br = branch
+        pr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
