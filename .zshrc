@@ -1,3 +1,7 @@
+# Prompt
+#export PS1="%n@%m %1~ %# " # default prompt
+export PS1="%n %1~ %# "
+
 # Alias
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
