@@ -8,3 +8,5 @@
     lg = log --all --decorate --oneline --graph
     br = branch
         pr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
+[core]
+	excludesfile = ~/.gitignore_global
