@@ -12,6 +12,7 @@ brew "nvm"
 brew "peco"
 brew "rbenv"
 brew "ruby-build"
+brew "watchman"
 
 cask "charles"
 cask "dropbox"
