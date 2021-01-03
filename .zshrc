@@ -1,6 +1,6 @@
 # Prompt
 #export PS1="%n@%m %1~ %# " # default prompt
-export PS1="%n %1~ %# "
+export PS1="%1~ %# "
 
 # Alias
 alias g='cd $(ghq root)/$(ghq list | peco)'
