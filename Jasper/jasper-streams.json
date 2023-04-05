@@ -17,14 +17,14 @@
     "enabled": 1,
     "created_at": "2021-05-10T04:26:30Z",
     "updated_at": "2021-05-12T06:04:36Z",
-    "searched_at": "2023-03-13T06:11:41Z",
+    "searched_at": "2023-04-05T01:45:42Z",
     "user_filters": null,
     "iconName": "github",
     "queryStreamId": 1,
     "defaultFilter": "is:unarchived",
     "userFilters": [],
     "unreadCount": 0,
-    "searchedAt": "2023-03-13T06:11:41Z"
+    "searchedAt": "2023-04-05T01:45:42Z"
   },
   {
     "id": 2,
@@ -121,13 +121,39 @@
     "enabled": 1,
     "created_at": "2021-05-12T00:00:55Z",
     "updated_at": "2021-05-12T00:00:55Z",
-    "searched_at": "2023-03-13T06:13:04Z",
+    "searched_at": "2023-04-05T01:46:38Z",
     "user_filters": null,
     "iconName": "github",
     "queryStreamId": 10,
     "defaultFilter": "is:unarchived",
     "userFilters": [],
-    "unreadCount": 0,
-    "searchedAt": "2023-03-13T06:13:04Z"
+    "unreadCount": 1,
+    "searchedAt": "2023-04-05T01:46:38Z"
+  },
+  {
+    "id": 11,
+    "type": "UserStream",
+    "name": "f-scratch",
+    "query_stream_id": 11,
+    "queries": [
+      "org:f-scratch"
+    ],
+    "default_filter": "is:unarchived",
+    "deleted_user_filter": null,
+    "position": 5,
+    "notification": 1,
+    "icon": "github",
+    "color": "#737475",
+    "enabled": 1,
+    "created_at": "2023-04-05T01:47:20Z",
+    "updated_at": "2023-04-05T01:47:20Z",
+    "searched_at": null,
+    "user_filters": "[]",
+    "iconName": "github",
+    "queryStreamId": 11,
+    "defaultFilter": "is:unarchived",
+    "userFilters": [],
+    "unreadCount": 71,
+    "searchedAt": null
   }
 ]
