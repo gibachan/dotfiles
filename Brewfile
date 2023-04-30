@@ -16,6 +16,7 @@ brew "peco"
 brew "rbenv"
 brew "ruby-build"
 brew "watchman"
+brew "zsh-autosuggestions"
 
 cask "charles"
 cask "dropbox"
