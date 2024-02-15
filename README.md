@@ -6,7 +6,5 @@
 $ ./link.sh
 $ brew bundle
 
-# setup for jenv
-$ jenv enable-plugin export
-$ exec $SHELL -l
+# setup for SDKMAN as described in https://sdkman.io/install
 ```
