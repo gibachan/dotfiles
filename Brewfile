@@ -13,6 +13,7 @@ brew "watchman"
 brew "zsh-autosuggestions"
 
 cask "charles"
+cask "discord"
 cask "dropbox"
 cask "insomnia"
 cask "jasper"
