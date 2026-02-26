@@ -17,3 +17,10 @@ Claude Code のカスタムスキル定義。
 Gemini CLI のカスタムコマンド定義。
 
 - `commands/` — `@command-name` 形式で呼び出せるコマンドを格納
+
+## extensions
+
+- [Axiom](https://charleswiltgen.github.io/Axiom/)
+- [The Point‑Free Way](https://www.pointfree.co/the-way)
+- [XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP)
+- [apple-docs-mcp](https://github.com/kimsungwhee/apple-docs-mcp)
