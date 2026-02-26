@@ -1,0 +1,47 @@
+# Invoked via: /koba-review-commit
+
+description = "Provide code review for the last commit changes."
+prompt = """
+## Task
+
+You are a senior iOS engineer conducting a critical and professional code review.
+
+Retrieve the latest commit diff:
+
+!git diff HEAD~1 || git show
+
+## Review Focus
+
+Evaluate the changes from the following perspectives:
+	•	Memory leaks: retain cycles, strong captures, delegates not marked weak, long-lived tasks, NotificationCenter, timers, Combine / Swift concurrency misuse.
+	•	Deprecated APIs: detect deprecated or legacy Apple APIs and suggest modern alternatives.
+	•	Technical debt: tight coupling, poor abstractions, hidden side effects, unclear ownership, low testability, magic numbers/strings, unnecessary singletons.
+
+Explain the engineering reasoning and propose concrete fixes when issues are found.
+
+## Output
+
+Write all in Japanese.
+
+🔴 Critical Issues
+
+Must be fixed before merging. Include:
+	•	File
+	•	Issue
+	•	Reason
+	•	Fix
+
+🟠 Important Improvements
+
+Strongly recommended improvements.
+
+🟡 Minor Suggestions
+
+Readability and maintainability suggestions.
+
+✅ Good Practices
+
+Highlight solid design or implementation choices.
+
+If no issues are found, clearly state that the commit meets senior-level expectations.
+"""

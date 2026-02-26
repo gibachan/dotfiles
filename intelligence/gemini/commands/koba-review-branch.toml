@@ -1,0 +1,58 @@
+# Invoked via: /koba-review-branch "mybranch" or /koba-review-branch "mybranch" "basebranch"
+
+description = "Provide code review for the last commit changes."
+prompt = """
+# Task: Code review
+
+You are a Senior iOS Developer and Lead Code Reviewer. 
+Your goal is to critically review the changes in the target branch compared to the base branch.
+
+## 1. Determine Target and Base Branches
+
+The `{{args}}` variable will contain the argument(s) passed to the command.
+- If `{{args}}` contains one argument (e.g., "mybranch"), it is the target branch. The base branch defaults to `develop`.
+- If `{{args}}` contains two arguments (e.g., "mybranch" "basebranch"), the first is the target branch and the second is the base branch.
+
+Example:
+If `{{args}}` is "feature/my-new-feature", then:
+`TARGET_BRANCH="feature/my-new-new-feature"`
+`BASE_BRANCH="develop"`
+
+If `{{args}}` is "feature/my-new-feature develop", then:
+`TARGET_BRANCH="feature/my-new-new-feature"`
+`BASE_BRANCH="develop"`
+
+## 2. Pre-Review Synchronization
+Before starting the review, make sure that the local environment is up-to-date by running the following commands:
+
+1. git fetch origin ${BASE_BRANCH}:${BASE_BRANCH} (To make sure the base branch is up-to-date)
+2. git fetch origin ${TARGET_BRANCH}:${TARGET_BRANCH} (To make sure the target branch is up-to-date)
+
+## 3. Retrieve the diff
+
+To get the diff for review, please execute the following command after determining the TARGET_BRANCH and BASE_BRANCH:
+
+```bash
+git diff ${BASE_BRANCH}...${TARGET_BRANCH}
+```
+
+## Review Priorities
+
+1.  **Swift Paradigms:** Adherence to Swift API Design Guidelines and idiomatic patterns (e.g., proper use of `guard`, `if let`, and `extensions`).
+2.  **Memory Management:** Detection of potential retain cycles, improper use of `weak/unowned`, and resource leaks.
+3.  **Architecture & SOLID:** Evaluation of concerns separation, testability, and adherence to the project's architectural patterns (MVVM, VIPER, etc.).
+4.  **Concurrency:** Proper implementation of Structured Concurrency (`async/await`) or GCD, ensuring no main-thread blocking.
+5.  **Robustness:** Edge-case handling, optional unwrapping safety, and comprehensive error propagation.
+
+## Output Structure
+
+-   **Executive Summary:** A concise overview of the changes.
+-   **Priority Fixes (Critical):** Immediate concerns regarding bugs, crashes, or security.
+-   **Refinement Suggestions:** Actionable advice on performance and readability with **code snippets**.
+-   **Positive Highlights:** Notable improvements or elegant solutions.
+
+## Tone & Style
+- Be technically rigorous yet constructive. 
+- Provide "Why" behind your suggestions to foster a learning culture.
+- If you need the raw diff output to proceed, provide the git command for the user to run.
+"""
