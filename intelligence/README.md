@@ -24,3 +24,4 @@ Gemini CLI のカスタムコマンド定義。
 - [The Point‑Free Way](https://www.pointfree.co/the-way)
 - [XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP)
 - [apple-docs-mcp](https://github.com/kimsungwhee/apple-docs-mcp)
+- [Firebase agent skills](https://firebase.google.com/docs/ai-assistance/agent-skills)
